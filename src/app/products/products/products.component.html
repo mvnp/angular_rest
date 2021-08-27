@@ -1,0 +1,16 @@
+<section class="container">
+
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center py-5">Shop Store!</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="pb-3 col-12 col-lg-3 col-md-4 col-sm-6" *ngFor="let produto of produtos">
+      <img alt="" [src]='"https://via.placeholder.com/400"' class="img-fluid" />
+      <h2>{{ produto.title }}</h2>
+    </div>
+  </div>
+
+</section>
