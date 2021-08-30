@@ -1,0 +1,55 @@
+<section>
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">
+        Me Clique!
+      </button>
+      <br>
+      <br>
+      <input type="text"
+        (keyup)="digitado($event)"
+        (keyup.enter)="salvarValor(campoInput.value)"
+        (blur)="salvarValor(campoInput.value)"
+        #campoInput
+      />
+      <br>
+      <br>
+      <p>Valor atual é: {{ valorAtual }}</p>
+      <p>Valor salvo é: {{ valorSalvo }}</p>
+      <br>
+      <br>
+      <p
+        (mouseover)="onMouseOverOut();"
+        (mouseout)="onMouseOverOut();"
+        [class.highlight]="isMouseOver"
+      >Passe o mouse em cima de mim!
+      </p>
+      <br>
+      <br>
+      <input type="text"
+        [value]="nome"
+        (input)="nome = inputName.value"
+        #inputName
+      />
+      <br>
+      <input type="text"
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event"
+      />
+      <br>
+      <input type="text" [(ngModel)]="nome" />
+      <br>
+      <br>
+      <p>Você digitou: {{ nome }}</p>
+      <br>
+      <br>
+      <input type="text" [(ngModel)]="pessoa.firstname" /><br>
+      <input type="text" [(ngModel)]="pessoa.cpf" /><br>
+      <input type="text" [(ngModel)]="pessoa.age" />
+      <br>
+      <p>Meu nome é <strong>{{ pessoa.firstname }}</strong> e meu cpf é o número <strong>{{ pessoa.cpf }}</strong></p>
+    </div>
+  </article>
+</section>
+j
